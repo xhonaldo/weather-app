@@ -1,14 +1,14 @@
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
+    android:id="@+id/dashboard_nav_graph"
     app:startDestination="@id/weatherMainFragment">
 
     <fragment
         android:id="@+id/weatherMainFragment"
         android:name="com.example.trackforce.presentation.ui.fragment.WeatherMainFragment"
         android:label="Weather"
-        tools:layout="@layout/fragment_weather" />
+        tools:layout="@layout/fragment_weather_main" />
 
     <fragment
         android:id="@+id/permissionDeniedFragment"

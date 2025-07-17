@@ -44,7 +44,7 @@ public class WeatherActivity extends AppCompatActivity {
         });
 
         NavHostFragment navHostFragment = (NavHostFragment) getSupportFragmentManager()
-                .findFragmentById(R.id.nav_host_fragment);
+                .findFragmentById(R.id.dashboard_nav);
 
         if (navHostFragment != null) {
             navController = navHostFragment.getNavController();

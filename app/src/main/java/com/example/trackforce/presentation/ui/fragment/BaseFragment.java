@@ -1,6 +1,5 @@
 package com.example.trackforce.presentation.ui.fragment;
 
-import android.content.Context;
 import android.os.Bundle;
 import android.view.View;
 
