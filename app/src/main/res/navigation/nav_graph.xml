@@ -1,0 +1,19 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/weatherFragment">
+
+    <fragment
+        android:id="@+id/weatherFragment"
+        android:name="com.example.trackforce.presentation.ui.fragment.WeatherFragment"
+        android:label="Weather"
+        tools:layout="@layout/fragment_weather" />
+
+    <fragment
+        android:id="@+id/permissionDeniedFragment"
+        android:name="com.example.trackforce.presentation.ui.fragment.PermissionDeniedFragment"
+        android:label="Permission Denied"
+        tools:layout="@layout/fragment_permission_denied" />
+
+</navigation>
