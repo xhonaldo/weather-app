@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.annotation.RequiresPermission;
-import androidx.fragment.app.Fragment;
 import androidx.lifecycle.ViewModelProvider;
 import androidx.navigation.NavController;
 import androidx.navigation.fragment.NavHostFragment;
@@ -24,7 +23,7 @@ import com.google.android.gms.location.LocationServices;
 import dagger.hilt.android.AndroidEntryPoint;
 
 @AndroidEntryPoint
-public class WeatherFragment extends BaseFragment {
+public class WeatherMainFragment extends BaseFragment {
     private WeatherViewModel weatherViewModel;
     private FragmentWeatherBinding binding;
     private FusedLocationProviderClient fusedLocationProviderClient;
@@ -75,37 +74,37 @@ public class WeatherFragment extends BaseFragment {
         });
     }
     private void handleWeatherApiResponse() {
-        weatherViewModel.getWeatherResult().observe(getViewLifecycleOwner(), result -> {
-            switch (result.getStatus()) {
-                case LOADING:
-                    binding.progressBar.setVisibility(View.VISIBLE);
-                    binding.textError.setVisibility(View.GONE);
-                    break;
-
-                case SUCCESS:
-                    binding.progressBar.setVisibility(View.GONE);
-                    binding.textError.setVisibility(View.GONE);
-
-                    if (result.getData() != null) {
-                        binding.textTemperature.setText("Temperature: " + result.getData().getMain().getTemp() + "°C");
-                        binding.textDescription.setText("Feels Like: " + result.getData().getMain().getFeelsLike());
-                        binding.textHumidity.setText("Humidity: " + result.getData().getMain().getHumidity() + "%");
-                    }
-                    break;
-
-                case ERROR:
-                    binding.progressBar.setVisibility(View.GONE);
-                    binding.textError.setVisibility(View.VISIBLE);
-                    binding.textError.setText("Error: " + result.getMessage());
-                    break;
-            }
-        });
+//        weatherViewModel.getWeatherResult().observe(getViewLifecycleOwner(), result -> {
+//            switch (result.getStatus()) {
+//                case LOADING:
+//                    binding.progressBar.setVisibility(View.VISIBLE);
+//                    binding.textError.setVisibility(View.GONE);
+//                    break;
+//
+//                case SUCCESS:
+//                    binding.progressBar.setVisibility(View.GONE);
+//                    binding.textError.setVisibility(View.GONE);
+//
+//                    if (result.getData() != null) {
+//                        binding.textTemperature.setText("Temperature: " + result.getData().getMain().getTemp() + "°C");
+//                        binding.textDescription.setText("Feels Like: " + result.getData().getMain().getFeelsLike());
+//                        binding.textHumidity.setText("Humidity: " + result.getData().getMain().getHumidity() + "%");
+//                    }
+//                    break;
+//
+//                case ERROR:
+//                    binding.progressBar.setVisibility(View.GONE);
+//                    binding.textError.setVisibility(View.VISIBLE);
+//                    binding.textError.setText("Error: " + result.getMessage());
+//                    break;
+//            }
+//        });
     }
 
     private void openPermissionDeniedFragment() {
         NavController navController = NavHostFragment.findNavController(this);
         if (navController.getCurrentDestination() != null &&
-                navController.getCurrentDestination().getId() == R.id.weatherFragment) {
+                navController.getCurrentDestination().getId() == R.id.weatherMainFragment) {
             Bundle bundle = new Bundle();
             bundle.putString("permission_key", Manifest.permission.ACCESS_FINE_LOCATION);
 
