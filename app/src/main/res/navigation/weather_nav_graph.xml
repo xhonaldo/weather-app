@@ -9,6 +9,10 @@
         android:name="com.example.trackforce.presentation.ui.fragment.WeatherDevModeFragment"
         android:label="WeatherDevModeFragment" />
 
+    <fragment
+        android:id="@+id/weatherUIModeFragment"
+        android:name="com.example.trackforce.presentation.ui.fragment.WeatherUIModeFragment"
+        android:label="WeatherUIModeFragment" />
 
     <fragment
         android:id="@+id/emptyFragment"

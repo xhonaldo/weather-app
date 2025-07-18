@@ -5,18 +5,26 @@ public class SysData {
 
     private final int id;
 
-    private final String sunrise;
+    private final String sunriseDescription;
 
-    private final String sunset;
+    private final String sunsetDescription;
 
     private final int type;
 
-    public SysData(String country, int id, String sunrise, String sunset, int type) {
+    private final int sunrise;
+
+    private final int sunset;
+
+    public SysData(String country, int id, String sunriseDescription, String sunsetDescription,
+                   int type, int sunrise, int sunset
+    ) {
         this.country = country;
         this.id = id;
         this.sunrise = sunrise;
         this.sunset = sunset;
         this.type = type;
+        this.sunsetDescription = sunsetDescription;
+        this.sunriseDescription = sunriseDescription;
     }
 
     public String getCountry() {
@@ -27,12 +35,19 @@ public class SysData {
         return id;
     }
 
-    public String getSunrise() {
+    public int getSunrise() {
         return sunrise;
     }
 
-    public String getSunset() {
+    public int getSunset() {
         return sunset;
+    }
+    public String getSunriseDescription() {
+        return sunriseDescription;
+    }
+
+    public String getSunsetDescription() {
+        return sunsetDescription;
     }
 
     public int getType() {

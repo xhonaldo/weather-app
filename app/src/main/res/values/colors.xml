@@ -1,29 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <!-- Primary Brand Colors -->
-    <color name="colorPrimary">#2196F3</color> <!-- Light Blue -->
+
+    <color name="colorPrimary">#2196F3</color>
     <color name="colorPrimaryDark">#1976D2</color>
-    <color name="colorAccent">#FFC107</color> <!-- Sunny Accent -->
+    <color name="colorAccent">#FFC107</color>
 
-    <!-- Backgrounds -->
-    <color name="backgroundDay">#E3F2FD</color>  <!-- Light Sky Blue -->
-    <color name="backgroundNight">#263238</color> <!-- Dark Blue Gray -->
 
-    <!-- Text Colors -->
+    <color name="backgroundDay">#E3F2FD</color>
+    <color name="backgroundNight">#263238</color>
+
+
     <color name="textPrimaryLight">#212121</color>
     <color name="textSecondaryLight">#757575</color>
     <color name="textPrimaryDark">#FFFFFF</color>
     <color name="textSecondaryDark">#B0BEC5</color>
 
-    <!-- Weather-specific colors -->
+
     <color name="sunnyColor">#FFEB3B</color>
     <color name="rainyColor">#2196F3</color>
     <color name="cloudyColor">#90A4AE</color>
     <color name="stormyColor">#424242</color>
     <color name="snowyColor">#FFFFFF</color>
 
-    <!-- Status Colors -->
+
     <color name="successGreen">#4CAF50</color>
     <color name="warningOrange">#FB8C00</color>
     <color name="errorRed">#F44336</color>
+
+    <color name="cardBackgroundLight">#33FFFFFF</color>
+    <color name="cardBackgroundDark">#33FFFFFF</color>
 </resources>

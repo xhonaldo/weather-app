@@ -12,6 +12,7 @@ constraintlayout = "2.2.1"
 #Network Versions
 navigationFragmentKtx = "2.9.2"
 navigationUiKtx = "2.9.2"
+picasso = "2.8"
 retrofitVersion = "3.0.0"
 okhttpVersion = "5.1.0"
 
@@ -42,6 +43,7 @@ androidx-room-runtime = { module = "androidx.room:room-runtime", version.ref = "
 androidx-navigation-ui-ktx = { module = "androidx.navigation:navigation-ui-ktx", version.ref = "navigationUiKtx" }
 androidx-navigation-fragment-ktx = { module = "androidx.navigation:navigation-fragment-ktx", version.ref = "navigationFragmentKtx" }
 # Network
+picasso = { module = "com.squareup.picasso:picasso", version.ref = "picasso" }
 retrofit-main = { group = "com.squareup.retrofit2", name = "retrofit", version.ref ="retrofitVersion" }
 retrofit-gson = { group = "com.squareup.retrofit2", name = "converter-gson", version.ref ="retrofitVersion" }
 retrofit-adapter-rxjava3 = { module = "com.squareup.retrofit2:adapter-rxjava3", version.ref = "retrofitVersion" }

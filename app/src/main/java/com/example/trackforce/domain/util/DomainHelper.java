@@ -1,5 +1,7 @@
 package com.example.trackforce.domain.util;
 
+import com.example.trackforce.BuildConfig;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.Locale;
@@ -37,9 +39,14 @@ public class DomainHelper {
         return sdf.format(date);
     }
 
+    public String getLogoUrl(String logoCode) {
+        return "https://openweathermap.org/img/wn/"+logoCode+"@4x.png";
+    }
+
     public String kelvinToCelsius(double kelvin) {
         double celsius = kelvin - 273.15;
-        return addCelsiusMetric(Math.round(celsius * 100.0) / 100.0);
+        double rounded = Math.round(celsius * 10.0) / 10.0;
+        return addCelsiusMetric(rounded);
     }
 
     public String addCelsiusMetric(Object value) {

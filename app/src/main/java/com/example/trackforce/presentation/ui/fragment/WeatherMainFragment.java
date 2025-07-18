@@ -70,6 +70,8 @@ public class WeatherMainFragment extends BaseFragment {
         binding.switchMode.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
                 showDevModeFragment(weatherResponseData);
+            } else {
+                showUIModeFragment(weatherResponseData);
             }
         });
     }
@@ -102,7 +104,7 @@ public class WeatherMainFragment extends BaseFragment {
                         if (binding.switchMode.isChecked()) {
                             showDevModeFragment(result.getData());
                         } else {
-
+                            showUIModeFragment(result.getData());
                         }
                     }
                     break;
@@ -132,6 +134,14 @@ public class WeatherMainFragment extends BaseFragment {
             Bundle bundle = new Bundle();
             bundle.putString("json_result", new Gson().toJson(responseData));
              childNavHostFragment.getNavController().navigate(R.id.weatherDevModeFragment, bundle);
+        }
+    }
+
+    private void showUIModeFragment(WeatherResponseData responseData) {
+        if (childNavHostFragment != null) {
+            Bundle bundle = new Bundle();
+            bundle.putString("json_result", new Gson().toJson(responseData));
+            childNavHostFragment.getNavController().navigate(R.id.weatherUIModeFragment, bundle);
         }
     }
 }

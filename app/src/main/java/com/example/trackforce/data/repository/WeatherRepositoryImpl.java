@@ -12,8 +12,6 @@ import com.example.trackforce.data.remote.WeatherRetrofit;
 import com.example.trackforce.data.remote.models.WeatherResponse;
 import com.example.trackforce.domain.repository.WeatherRepository;
 
-import java.util.concurrent.Executors;
-
 import javax.inject.Inject;
 import javax.inject.Singleton;
 
@@ -51,7 +49,7 @@ public class WeatherRepositoryImpl extends BaseRepository implements WeatherRepo
                         if (entity == null) {
                             throw new IllegalStateException("No cached weather data available");
                         }
-                        return WeatherMapper.toResponse(entity); // convert to WeatherResponse
+                        return WeatherMapper.toResponse(entity);
                     } catch (Exception e) {
                         throw new RuntimeException("Failed to load cached weather", e);
                     }

@@ -13,5 +13,7 @@
 
         <!-- Status bar -->
         <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimaryDark</item>
+        <item name="cardBackgroundColor">@color/cardBackgroundDark</item>
+
     </style>
 </resources>

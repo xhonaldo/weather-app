@@ -84,7 +84,9 @@ public class WeatherDomainMapper {
                 sys.getId(),
                 domainHelper.getUtcTimeHms(sys.getSunrise()),
                 domainHelper.getUtcTimeHms(sys.getSunset()),
-                sys.getType()
+                sys.getType(),
+                sys.getSunrise(),
+                sys.getSunset()
         );
     }
 
@@ -98,7 +100,8 @@ public class WeatherDomainMapper {
                             w.getDescription(),
                             w.getIcon(),
                             w.getId(),
-                            w.getMain()
+                            w.getMain(),
+                            domainHelper.getLogoUrl(w.getIcon())
                     )
             );
         }

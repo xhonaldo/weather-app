@@ -11,15 +11,22 @@ public class WeatherData {
 
     private final String main;
 
-    public WeatherData(String description, String icon, int id, String main) {
+    private final String logoUrl;
+
+    public WeatherData(String description, String icon, int id, String main, String logoUrl) {
         this.description = description;
         this.icon = icon;
         this.id = id;
         this.main = main;
+        this.logoUrl = logoUrl;
     }
 
     public String getDescription() {
         return description;
+    }
+
+    public String getLogoUrl() {
+        return logoUrl;
     }
 
     public String getIcon() {

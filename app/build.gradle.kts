@@ -83,8 +83,14 @@ dependencies {
     implementation(libs.hilt.androidx.common)
     annotationProcessor(libs.hilt.android.compiler)
 
-
-
+    //Picasso
+    implementation(libs.picasso)
+    //Test
+    testImplementation("org.mockito:mockito-core:5.11.0")
+    testImplementation("org.mockito:mockito-inline:5.2.0")
+    testImplementation("io.reactivex.rxjava3:rxjava:3.1.8")
+    testImplementation("org.mockito:mockito-junit-jupiter:5.11.0")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)

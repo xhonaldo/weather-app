@@ -3,9 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="16dp">
+    android:layout_height="match_parent">
 
+    <fragment
+        android:id="@+id/child_nav_host_fragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:defaultNavHost="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:navGraph="@navigation/weather_nav_graph" />
 
     <Switch
         android:id="@+id/switchMode"
@@ -15,31 +25,11 @@
         android:layout_alignParentEnd="true"
         android:text="Dev Mode"
         android:checked="true"
+        android:layout_margin="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         tools:ignore="UseSwitchCompatOrMaterialXml" />
 
-    <View
-        android:id="@+id/view"
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_margin="20dp"
-        android:alpha="0.2"
-        android:background="@color/textSecondaryLight"
-        app:layout_constraintTop_toBottomOf="@+id/switchMode"
- />
-
-    <fragment
-        android:id="@+id/child_nav_host_fragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="20dp"
-        app:defaultNavHost="false"
-        app:layout_constraintBottom_toTopOf="@+id/textError"
-        app:layout_constraintTop_toBottomOf="@+id/view"
-        app:navGraph="@navigation/weather_nav_graph"
-        />
 
     <TextView
         android:id="@+id/textError"
@@ -48,7 +38,8 @@
         android:text="Error: --"
         android:textColor="@android:color/holo_red_dark"
         android:textSize="16sp"
-        android:visibility="visible"
+        android:layout_margin="20dp"
+        android:visibility="gone"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
