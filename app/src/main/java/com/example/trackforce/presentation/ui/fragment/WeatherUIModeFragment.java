@@ -59,6 +59,7 @@ public class WeatherUIModeFragment extends  BaseFragment {
 
         binding.tvCity.setText(responseData.getCityName());
         binding.tvDate.setText(responseData.getFormattedDateTime());
+        binding.tvDescription.setText(responseData.getCloud().getCloudiness());
         binding.tvTemperature.setText(responseData.getMain().getTemp());
         binding.tvFeelsLike.setText(responseData.getMain().getFeelsLike());
         binding.tvHumidity.setText(responseData.getMain().getHumidity());
