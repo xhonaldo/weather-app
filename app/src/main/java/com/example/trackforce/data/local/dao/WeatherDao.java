@@ -6,7 +6,7 @@ import androidx.room.Insert;
 import androidx.room.OnConflictStrategy;
 import androidx.room.Query;
 
-import com.example.trackforce.data.local.model.model.WeatherEntity;
+import com.example.trackforce.data.local.model.WeatherEntity;
 
 @Dao
 public interface WeatherDao {

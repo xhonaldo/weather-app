@@ -16,6 +16,7 @@ import androidx.navigation.fragment.NavHostFragment;
 import com.example.trackforce.R;
 import com.example.trackforce.data.remote.models.WeatherResponse;
 import com.example.trackforce.databinding.FragmentWeatherMainBinding;
+import com.example.trackforce.domain.model.WeatherResponseData;
 import com.example.trackforce.presentation.util.permission.Permission;
 import com.example.trackforce.presentation.viewmodel.WeatherViewModel;
 import com.google.android.gms.location.FusedLocationProviderClient;
@@ -30,7 +31,7 @@ public class WeatherMainFragment extends BaseFragment {
     private FragmentWeatherMainBinding binding;
     private FusedLocationProviderClient fusedLocationProviderClient;
     private NavHostFragment childNavHostFragment;
-    private WeatherResponse weatherResponse;
+    private WeatherResponseData weatherResponseData;
 
 
     @Override
@@ -68,7 +69,7 @@ public class WeatherMainFragment extends BaseFragment {
 
         binding.switchMode.setOnCheckedChangeListener((buttonView, isChecked) -> {
             if (isChecked) {
-                showDevModeFragment(weatherResponse);
+                showDevModeFragment(weatherResponseData);
             }
         });
     }
@@ -97,7 +98,7 @@ public class WeatherMainFragment extends BaseFragment {
                     binding.progressBar.setVisibility(View.GONE);
                     binding.textError.setVisibility(View.GONE);
                     if (result.getData() != null) {
-                        weatherResponse = result.getData();
+                        weatherResponseData = result.getData();
                         if (binding.switchMode.isChecked()) {
                             showDevModeFragment(result.getData());
                         } else {
@@ -126,10 +127,10 @@ public class WeatherMainFragment extends BaseFragment {
         }
     }
 
-    private void showDevModeFragment(WeatherResponse response) {
+    private void showDevModeFragment(WeatherResponseData responseData) {
         if (childNavHostFragment != null) {
             Bundle bundle = new Bundle();
-            bundle.putString("json_result", new Gson().toJson(response));
+            bundle.putString("json_result", new Gson().toJson(responseData));
              childNavHostFragment.getNavController().navigate(R.id.weatherDevModeFragment, bundle);
         }
     }

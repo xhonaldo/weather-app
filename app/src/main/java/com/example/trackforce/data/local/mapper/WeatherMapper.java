@@ -1,6 +1,6 @@
 package com.example.trackforce.data.local.mapper;
 
-import com.example.trackforce.data.local.model.model.WeatherEntity;
+import com.example.trackforce.data.local.model.WeatherEntity;
 import com.example.trackforce.data.remote.models.WeatherResponse;
 
 public class WeatherMapper {

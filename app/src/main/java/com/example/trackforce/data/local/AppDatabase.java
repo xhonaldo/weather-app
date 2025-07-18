@@ -5,7 +5,7 @@ import androidx.room.RoomDatabase;
 import androidx.room.TypeConverters;
 
 import com.example.trackforce.data.local.dao.WeatherDao;
-import com.example.trackforce.data.local.model.model.WeatherEntity;
+import com.example.trackforce.data.local.model.WeatherEntity;
 
 @Database(entities = {WeatherEntity.class}, version = 1)
 @TypeConverters({WeatherListConverter.class})

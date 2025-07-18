@@ -1,4 +1,4 @@
-package com.example.trackforce.data.local.model.model;
+package com.example.trackforce.data.local.model;
 
 import androidx.room.Embedded;
 import androidx.room.Entity;

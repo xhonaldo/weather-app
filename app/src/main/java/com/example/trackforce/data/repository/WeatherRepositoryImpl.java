@@ -3,7 +3,7 @@ package com.example.trackforce.data.repository;
 import com.example.trackforce.data.local.AppDatabase;
 import com.example.trackforce.data.local.dao.WeatherDao;
 import com.example.trackforce.data.local.mapper.WeatherMapper;
-import com.example.trackforce.data.local.model.model.WeatherEntity;
+import com.example.trackforce.data.local.model.WeatherEntity;
 import com.example.trackforce.data.remote.ApiServiceFactory;
 import com.example.trackforce.data.remote.WeatherApi;
 import com.example.trackforce.data.remote.WeatherRetrofit;

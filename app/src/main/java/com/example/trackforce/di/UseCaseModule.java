@@ -1,5 +1,6 @@
 package com.example.trackforce.di;
 
+import com.example.trackforce.domain.mapper.WeatherDomainMapper;
 import com.example.trackforce.domain.repository.WeatherRepository;
 import com.example.trackforce.domain.usecases.GetWeatherUseCase;
 
@@ -12,7 +13,7 @@ import dagger.hilt.components.SingletonComponent;
 @InstallIn(SingletonComponent.class)
 public class UseCaseModule {
     @Provides
-    public GetWeatherUseCase provideGetWeatherUseCase(WeatherRepository repository) {
-        return new GetWeatherUseCase(repository);
+    public GetWeatherUseCase provideGetWeatherUseCase(WeatherRepository repository, WeatherDomainMapper mapper) {
+        return new GetWeatherUseCase(repository, mapper);
     }
 }
