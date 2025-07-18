@@ -3,7 +3,6 @@ package com.example.trackforce.presentation.viewmodel;
 import androidx.lifecycle.LiveData;
 import androidx.lifecycle.MutableLiveData;
 
-import com.example.trackforce.data.remote.models.WeatherResponse;
 import com.example.trackforce.domain.model.WeatherResponseData;
 import com.example.trackforce.domain.usecases.GetWeatherUseCase;
 import com.example.trackforce.domain.util.ErrorHandler;

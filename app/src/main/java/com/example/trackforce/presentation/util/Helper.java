@@ -5,17 +5,13 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.Uri;
 import android.provider.Settings;
-
 import androidx.core.content.ContextCompat;
-
 import com.example.trackforce.domain.model.WeatherData;
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonElement;
 import com.google.gson.JsonParser;
-
 import java.util.List;
-
 import javax.inject.Inject;
 import javax.inject.Singleton;
 

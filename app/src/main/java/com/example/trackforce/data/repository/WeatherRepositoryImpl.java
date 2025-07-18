@@ -1,7 +1,5 @@
 package com.example.trackforce.data.repository;
 
-import android.util.Log;
-
 import com.example.trackforce.data.local.AppDatabase;
 import com.example.trackforce.data.local.dao.WeatherDao;
 import com.example.trackforce.data.local.mapper.WeatherMapper;

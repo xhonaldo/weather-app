@@ -38,7 +38,6 @@ public class BaseRepository {
             liveData.observeForever(observer);
         };
 
-        // Post observeForever on the main thread
         new Handler(Looper.getMainLooper()).post(observeRunnable);
 
         try {

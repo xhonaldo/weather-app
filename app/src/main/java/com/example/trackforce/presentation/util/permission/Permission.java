@@ -20,7 +20,6 @@ public abstract class Permission {
         }
     }
 
-    // Factory method similar to companion object's from()
     public static Permission from(String permission) {
         if (Manifest.permission.ACCESS_FINE_LOCATION.equals(permission)
                 || Manifest.permission.ACCESS_COARSE_LOCATION.equals(permission)) {
