@@ -12,10 +12,8 @@ import com.example.trackforce.data.local.model.WeatherEntity;
 public interface WeatherDao {
     @Insert(onConflict = OnConflictStrategy.REPLACE)
     void insertWeather(WeatherEntity weatherEntity);
-
-    @Query("SELECT * FROM weather WHERE id = :id")
-    LiveData<WeatherEntity> getWeatherById(int id);
-
+    @Query("SELECT * FROM weather LIMIT 1")
+    LiveData<WeatherEntity> getWeather();
     @Query("DELETE FROM weather")
     void clearAll();
 }

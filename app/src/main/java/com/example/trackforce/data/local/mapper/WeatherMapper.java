@@ -2,7 +2,6 @@ package com.example.trackforce.data.local.mapper;
 
 import com.example.trackforce.data.local.model.WeatherEntity;
 import com.example.trackforce.data.remote.models.WeatherResponse;
-
 public class WeatherMapper {
 
     public static WeatherEntity fromResponse(WeatherResponse response) {
@@ -21,5 +20,23 @@ public class WeatherMapper {
         entity.wind = response.getWind();
         entity.weather = response.getWeather();
         return entity;
+    }
+
+    public static WeatherResponse toResponse(WeatherEntity entity) {
+        return new WeatherResponse(
+                entity.base,
+                entity.clouds,
+                entity.cod,
+                entity.coord,
+                entity.dt,
+                entity.id,
+                entity.main,
+                entity.name,
+                entity.sys,
+                entity.timezone,
+                entity.visibility,
+                entity.weather,
+                entity.wind
+        );
     }
 }
