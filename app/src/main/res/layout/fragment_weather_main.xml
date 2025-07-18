@@ -24,7 +24,7 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:text="Dev Mode"
-        android:checked="true"
+        android:checked="false"
         android:layout_margin="20dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
